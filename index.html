@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <section class="container py-5">
+        <h1>Bài tập DOM JS</h1>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-2">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <button class="nav-link active" id="v-pills-bt1-tab" data-toggle="pill" data-target="#v-pills-bt1" type="button" role="tab" aria-controls="v-pills-bt1" aria-selected="true">Bài tập 1</button>
+                    <button class="nav-link" id="v-pills-bt2-tab" data-toggle="pill" data-target="#v-pills-bt2" type="button" role="tab" aria-controls="v-pills-bt2" aria-selected="false">Bài tập 2</button>
+                    <button class="nav-link" id="v-pills-bt3-tab" data-toggle="pill" data-target="#v-pills-bt3" type="button" role="tab" aria-controls="v-pills-bt3" aria-selected="false">Bài tập 3</button>
+                    <button class="nav-link" id="v-pills-bt4-tab" data-toggle="pill" data-target="#v-pills-bt4" type="button" role="tab" aria-controls="v-pills-bt4" aria-selected="false">Bài tập 4</button>
+                    <button class="nav-link" id="v-pills-bt5-tab" data-toggle="pill" data-target="#v-pills-bt5" type="button" role="tab" aria-controls="v-pills-bt5" aria-selected="false">Bài tập 5</button>
+                </div>
+            </div>
+
+            <div class="col-1"></div>
+
+            <div class="col-6">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-bt1" role="tabpanel" aria-labelledby="v-pills-bt1-tab">
+                        <h2>Tính tiền lương nhân viên</h2>
+                        <div class="diagram">
+                            <h4>Sơ đồ 3 khối</h4>
+                            <ul>
+                                <li>
+                                    <h6>Khối 1: Input</h6>
+                                    luongNgay(lương 1 ngày), soNgay (số ngày làm)
+                                </li>
+                                <li>
+                                    <h6>Khối 2: Các bước xử lý</h6>
+                                    <ul>
+                                        <li>Tạo hàm, gắn sự kiện click
+                                            <i class="fa-solid fa-arrow-right"></i> Lấy giá trị từ form</li>
+                                        <li>
+                                            Kiểm tra điều kiện và lập công thức
+                                            <ul>
+                                                <li>
+                                                    Kiểm tra điều kiện
+                                                    <br>Nếu luongNgay
+                                                    <=0 hoặc soNgay<0 <i class="fa-solid fa-arrow-right">
+                                                        </i>
+                                                        Thông báo nhập lại
+                                                </li>
+                                                <li>
+                                                    Lập công thức
+                                                    <br> luong = luongNgay * soNgay
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>Hiển thị kết quả</li>
+                                    </ul>
+                                    <li>
+                                        <h6>Khối 3: Output</h6>
+                                        luong
+                                    </li>
+                            </ul>
+                        </div>
+                        <form class="mt-2">
+                            <div class="form-group">
+                                <label for="luongNgay">Lương Ngày</label>
+                                <input type="number" class="form-control" id="luongNgay" value="100000">
+                            </div>
+                            <div class="form-group">
+                                <label for="soNgay">Số Ngày</label>
+                                <input type="number" class="form-control" id="soNgay">
+                            </div>
+                            <button id="btnTinhLuong" type="button" class="btn btn-primary">Tính Lương</button>
+                            <p id="txtLuong" class="alert alert-success"></p>
+                        </form>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-bt2" role="tabpanel" aria-labelledby="v-pills-bt2-tab">
+                        <h2>Tính giá trị trung bình</h2>
+                        <div class="diagram">
+                            <h4>Sơ đồ 3 khối</h4>
+                            <ul>
+                                <li>
+                                    <h6>Khối 1: Input</h6>
+                                    so1, so2, so3, so4, so5
+                                </li>
+                                <li>
+                                    <h6>Khối 2: Các bước xử lý</h6>
+                                    <ul>
+                                        <li>Tạo hàm, gắn sự kiện click Lấy giá trị từ form</li>
+                                        <li>
+                                            Lập công thức
+                                            <br> trungBinh = (so1 + so2 + so3 + so4 + so5) / 5
+                                        </li>
+                                        <li>Hiển thị kết quả</li>
+                                    </ul>
+                                    <li>
+                                        <h6>Khối 3: Output</h6>
+                                        trungBinh
+                                    </li>
+                            </ul>
+                        </div>
+                        <form class="mt-2">
+                            <div class="form-row">
+                                <div class="form-group col-4">
+                                    <input type="number" class="form-control" id="soThuNhat" placeholder="Nhập số thứ 1">
+                                </div>
+                                <div class="form-group col-4">
+                                    <input type="number" class="form-control" id="soThuHai" placeholder="Nhập số thứ 2">
+                                </div>
+                                <div class="form-group col-4">
+                                    <input type="number" class="form-control" id="soThuBa" placeholder="Nhập số thứ 3">
+                                </div>
+                                <div class="form-group col-4">
+                                    <input type="number" class="form-control" id="soThuBon" placeholder="Nhập số thứ 4">
+                                </div>
+                                <div class="form-group col-4">
+                                    <input type="number" class="form-control" id="soThuNam" placeholder="Nhập số thứ 5">
+                                </div>
+                            </div>
+                            <button id="btnTrungBinh" type="button" class="btn btn-primary mb-3">Tính trung
+                                bình</button>
+                            <p id="txtTrungBinh" class="alert alert-success"></p>
+                        </form>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-bt3" role="tabpanel" aria-labelledby="v-pills-bt3-tab">
+                        <h2>Quy đổi tiền</h2>
+                        <div class="diagram">
+                            <h4>Sơ đồ 3 khối</h4>
+                            <ul>
+                                <li>
+                                    <h6>Khối 1: Input</h6>
+                                    donGiaUSD (gán đơn giá USD hiện tại là 23570), soUSD (số USD)
+                                </li>
+                                <li>
+                                    <h6>Khối 2: Các bước xử lý</h6>
+                                    <ul>
+                                        <li>Tạo hàm, gắn sự kiện click
+                                            <i class="fa-solid fa-arrow-right"></i> Lấy giá trị từ form</li>
+                                        <li>
+                                            Kiểm tra điều kiện và lập công thức
+                                            <ul>
+                                                <li>
+                                                    Kiểm tra điều kiện
+                                                    <br>Nếu soUSD
+                                                    <=0 <i class="fa-solid fa-arrow-right"></i> Thông báo nhập lại
+                                                </li>
+                                                <li>
+                                                    Lập công thức
+                                                    <br> tienViet = soUSD * donGiaUSD
+                                                </li>
+                                            </ul>
+
+                                        </li>
+                                        <li>Hiển thị kết quả</li>
+                                    </ul>
+                                    <li>
+                                        <h6>Khối 3: Output</h6>
+                                        tienViet
+                                    </li>
+                            </ul>
+                        </div>
+                        <form class="mt-2">
+                            <input class="form-control" type="number" id="soUSD" placeholder="Nhập số tiền USD">
+                            <button id="btnQuyDoi" type="button" class="btn btn-primary my-3">Quy đổi tiền</button>
+                            <p id="txtQuyDoi" class="alert alert-success"></p>
+                        </form>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-bt4" role="tabpanel" aria-labelledby="v-pills-bt4-tab">
+                        <h2>Tính diện tích, chu vi hình chữ nhật</h2>
+                        <div class="diagram">
+                            <h4>Sơ đồ 3 khối</h4>
+                            <ul>
+                                <li>
+                                    <h6>Khối 1: Input</h6>
+                                    chieuDai, chieuRong
+                                </li>
+                                <li>
+                                    <h6>Khối 2: Các bước xử lý</h6>
+                                    <ul>
+                                        <li>Tạo hàm, gắn sự kiện click
+                                            <i class="fa-solid fa-arrow-right"></i> Lấy giá trị từ form</li>
+                                        <li>
+                                            Kiểm tra điều kiện và lập công thức
+                                            <ul>
+                                                <li>
+                                                    Kiểm tra điều kiện
+                                                    <br> Nếu chieuDai
+                                                    <=0 hoặc chieuRong <=0 <i class="fa-solid fa-arrow-right"></i> Thông báo nhập lại
+                                                </li>
+                                                <li>
+                                                    Lập công thức
+                                                    <br> Chu vi: chuVi = (chieuDai + chieuRong) * 2
+                                                    <br> Diện tích: dienTich = chieuDai * chieuRong
+                                                </li>
+                                            </ul>
+
+                                        </li>
+                                        <li>Hiển thị kết quả</li>
+                                    </ul>
+                                    <li>
+                                        <h6>Khối 3: Output</h6>
+                                        chuVi, dienTich
+                                    </li>
+                            </ul>
+                        </div>
+                        <form class="mt-2">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="number" class="form-control" id="chieuDai" placeholder="Nhập chiều dài">
+                                </div>
+                                <div class="col">
+                                    <input type="number" class="form-control" id="chieuRong" placeholder="Nhập chiều rộng">
+                                </div>
+                            </div>
+                            <button id="btnSP" type="button" class="btn btn-primary my-3">Tính Chu Vi & Diện Tích</button>
+                            <p id="txtSP" class="alert alert-success"></p>
+                        </form>
+                    </div>
+
+                    <div class="tab-pane fade" id="v-pills-bt5" role="tabpanel" aria-labelledby="v-pills-bt5-tab">
+                        <h2>Tính tổng 2 ký số</h2>
+                        <div class="diagram">
+                            <h4>Sơ đồ 3 khối</h4>
+                            <ul>
+                                <li>
+                                    <h6>Khối 1: Input</h6>
+                                    so (số nguyên dương có 2 chữ số)
+                                </li>
+                                <li>
+                                    <h6>Khối 2: Các bước xử lý</h6>
+                                    <ul>
+                                        <li>Tạo hàm, gắn sự kiện click
+                                            <i class="fa-solid fa-arrow-right"></i> Lấy giá trị từ form</li>
+                                        <li>
+                                            Kiểm tra điều kiện và lập công thức
+                                            <ul>
+                                                <li>
+                                                    Kiểm tra điều kiện
+                                                    <br> Nếu so > 99 hoặc so
+                                                    < 10 hoặc Number.isInteger(num)==false<br>
+                                                        <i class="fa-solid fa-arrow-right"></i> Thông báo nhập lại
+                                                </li>
+                                                <li>
+                                                    Lập công thức
+                                                    <br> tong = Math.floor(so / 10) + (so % 10)
+                                                </li>
+                                            </ul>
+
+                                        </li>
+                                        <li>Hiển thị kết quả</li>
+                                    </ul>
+                                    <li>
+                                        <h6>Khối 3: Output</h6>
+                                        tong
+                                    </li>
+                            </ul>
+                        </div>
+                        <form class="mt-2">
+                            <input class="form-control" type="number" id="nhapSo" placeholder="Nhập số có 2 chữ số">
+                            <button id="btnTong" type="button" class="btn btn-primary my-3">Tính Tổng 2 Chữ Số</button>
+                            <p id="txtTong" class="alert alert-success"></p>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-2"></div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./js/doiTien.js"></script>
+    <script src="./js/hinhChuNhat.js"></script>
+    <script src="./js/tinhLuong.js"></script>
+    <script src="./js/tongKySo.js"></script>
+    <script src="./js/trungbinh.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: var(--green);
+}
+
+.fade .diagram {
+    padding: 10px 20px;
+    box-shadow: 0 0 20px 0 rgba(34, 47, 236, 0.3);
+    border-radius: 15px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+ul li {
+    margin: auto;
+    padding: 5px;
+}
