@@ -1,7 +1,7 @@
 function tongKySo() {
     var so = Number(document.getElementById("nhapSo").value);
 
-    if (so < 10 || so > 9 || Number.isInteger(so) == false) {
+    if (so < 10 || so > 99 || Number.isInteger(so) == false) {
         alert("Mời nhập lại số!");
     } else {
         var tong = Math.floor(so / 10) + (so % 10);
